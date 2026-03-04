@@ -1,11 +1,13 @@
+# Decimal to Hexadecimal Converter
 User_Action = 'Y'
+# This loops until the user decides to stop by entering 'N' or 'n'
 
 while User_Action == 'Y':
 
     # Decimal input validation
     while True:
         try:
-            Decimal_Number = float(input("Input Decimal number: "))
+            Decimal_Number = float(input("Enter a Decimal number: "))
             break
         except ValueError:
             print("Input not recognized! Please enter a valid Decimal number.")
@@ -15,6 +17,7 @@ while User_Action == 'Y':
     fraction_part = Decimal_Number - whole_part
 
     hex_chars = "0123456789ABCDEF"
+    # The hex_chars string contains the characters for hexadecimal digits (0-9 and A-F) which correspond to the values 0-15.
 
     # Whole Part Conversion
     whole_hex = ""
@@ -25,6 +28,7 @@ while User_Action == 'Y':
     else:
         while temp_whole > 0:
             remainder = temp_whole % 16
+            # The remainder will be between 0 and 15, which corresponds to the hexadecimal digits.
             whole_hex = hex_chars[remainder] + whole_hex
             temp_whole //= 16
     

@@ -1,4 +1,6 @@
+# Decimal to Octal Converter
 User_Action = 'Y'
+# This loops until the user decides to stop by entering 'N' or 'n'
 
 while User_Action == 'Y':
 
